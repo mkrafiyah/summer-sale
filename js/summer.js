@@ -30,13 +30,12 @@ function calculatePrice(target) {
 
    if (total >= 200) {
       document.getElementById('btn-coupon').disabled = false;
+      
    }
    //purchase button enabled
    if(total> 0){
       document.getElementById('btn-purchase').disabled = false;
    }
-
-
 
 }
 function getSingleProductInfo(target) {
@@ -63,7 +62,9 @@ function applyCoupon() {
       document.getElementById('total-discount').innerText = discountPrice;
       document.getElementById('net-total').innerText = netTotal;
       isCouponApplied = true;
-      couponCode.value =''
+      couponCode.value ='';
+      
+      
    }else{
       alert('invalid coupon code');
    }
